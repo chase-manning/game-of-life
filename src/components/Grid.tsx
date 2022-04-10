@@ -8,11 +8,6 @@ import {
   toggle,
 } from "../state/lifeSlice";
 
-interface GridProps {
-  width: number;
-  height: number;
-}
-
 const StyledGrid = styled.canvas`
   width: 100%;
   height: 100%;
@@ -71,7 +66,15 @@ const Grid = () => {
         );
       }
     }
-  }, [cells, width, height]);
+  }, [
+    cells,
+    width,
+    height,
+    canvasHeight,
+    canvasWidth,
+    heightRatio,
+    widthRatio,
+  ]);
 
   return (
     <StyledGrid

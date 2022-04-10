@@ -9,7 +9,7 @@ export interface LifeState {
 }
 
 const initialState: LifeState = {
-  width: 80,
+  width: 100,
   height: 100,
   cells: {},
   playing: false,

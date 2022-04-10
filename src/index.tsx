@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
 import GlobalStyles from "./styles/GlobalStyles";
 import Orchestrator from "./components/Orchestrator";
+import ScreenHandler from "./components/ScreenHandler";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.render(
       <GlobalStyles />
       <App />
       <Orchestrator />
+      <ScreenHandler />
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

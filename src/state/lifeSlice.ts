@@ -69,10 +69,17 @@ export const lifeSlice = createSlice({
     clear: (state) => {
       state.cells = {};
     },
+    setHeight: (state, action: PayloadAction<number>) => {
+      state.height = action.payload;
+    },
+    setWidth: (state, action: PayloadAction<number>) => {
+      state.width = action.payload;
+    },
   },
 });
 
-export const { step, toggle, play, pause, clear } = lifeSlice.actions;
+export const { step, toggle, play, pause, clear, setHeight, setWidth } =
+  lifeSlice.actions;
 
 export const selectCells = (state: RootState) => state.life.cells;
 export const selectWidth = (state: RootState) => state.life.width;

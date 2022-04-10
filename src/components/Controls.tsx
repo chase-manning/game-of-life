@@ -14,7 +14,7 @@ const StyledControls = styled.div`
   transform: translate(-50%, 0);
   background: var(--bg);
   border: solid 2px var(--border);
-  padding: 1rem;
+  padding: 0 1rem;
 `;
 
 const Button = styled.button`

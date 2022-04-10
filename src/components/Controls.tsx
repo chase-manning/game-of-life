@@ -9,9 +9,9 @@ import trashIcon from "../assets/buttons/trash.svg";
 const StyledControls = styled.div`
   display: flex;
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, 2px);
   background: var(--bg);
   border: solid 2px var(--border);
   padding: 0 1rem;

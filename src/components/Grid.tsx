@@ -21,7 +21,7 @@ const Grid = () => {
   return (
     <StyledGrid width={width} height={height}>
       {Array.from(Array(width * height).keys()).map((i) => (
-        <Cell index={i} />
+        <Cell key={i} index={i} />
       ))}
     </StyledGrid>
   );

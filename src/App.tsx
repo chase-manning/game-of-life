@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// import Grid from "./components/Grid";
+import Grid from "./components/Grid";
 
 const StyledApp = styled.div`
   position: fixed;
@@ -11,7 +11,11 @@ const StyledApp = styled.div`
 `;
 
 const App = () => {
-  return <StyledApp>meow</StyledApp>;
+  return (
+    <StyledApp>
+      <Grid />
+    </StyledApp>
+  );
 };
 
 export default App;

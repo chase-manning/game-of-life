@@ -12,7 +12,7 @@ const Orchestrator = () => {
     if (playing && !interval) {
       interval = setInterval(() => {
         dispatch(step());
-      }, 1000);
+      }, 500);
     }
     if (!playing && interval) {
       clearInterval(interval);

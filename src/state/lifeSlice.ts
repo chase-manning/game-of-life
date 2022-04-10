@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction, Selector } from "@reduxjs/toolkit";
 import { RootState } from "./store";
 
 export interface LifeState {
@@ -9,8 +9,8 @@ export interface LifeState {
 }
 
 const initialState: LifeState = {
-  width: 20,
-  height: 15,
+  width: 80,
+  height: 100,
   cells: {},
   playing: false,
 };
@@ -78,5 +78,14 @@ export const selectCells = (state: RootState) => state.life.cells;
 export const selectWidth = (state: RootState) => state.life.width;
 export const selectHeight = (state: RootState) => state.life.height;
 export const selectPlaying = (state: RootState) => state.life.playing;
+
+export function selectAlive(
+  x: number,
+  y: number
+): Selector<RootState, boolean> {
+  return (state: RootState) => {
+    return state.life.cells[x] && state.life.cells[x][y];
+  };
+}
 
 export default lifeSlice.reducer;

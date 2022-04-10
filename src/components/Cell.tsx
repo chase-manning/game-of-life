@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import { selectCells, selectWidth, toggle } from "../state/lifeSlice";
+import { selectAlive, selectWidth, toggle } from "../state/lifeSlice";
 
 const StyledCell = styled.button`
   display: flex;
@@ -16,17 +16,16 @@ interface Props {
 
 const Cell = ({ index }: Props) => {
   const width = useSelector(selectWidth);
-  const cells = useSelector(selectCells);
   const dispatch = useDispatch();
-
   const x = index % width;
   const y = Math.floor(index / width);
+  const alive = useSelector(selectAlive(x, y));
 
   return (
     <StyledCell
       onClick={() => dispatch(toggle({ x, y }))}
       style={{
-        background: cells[x] && cells[x][y] ? "var(--main)" : "var(--bg)",
+        background: alive ? "var(--main)" : "var(--bg)",
       }}
     />
   );

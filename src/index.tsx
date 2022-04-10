@@ -5,12 +5,14 @@ import { store } from "./state/store";
 import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
 import GlobalStyles from "./styles/GlobalStyles";
+import Orchestrator from "./components/Orchestrator";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <GlobalStyles />
       <App />
+      <Orchestrator />
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

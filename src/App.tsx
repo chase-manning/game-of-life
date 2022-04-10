@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Controls from "./components/Controls";
 import Grid from "./components/Grid";
 
 const StyledApp = styled.div`
@@ -14,6 +15,7 @@ const App = () => {
   return (
     <StyledApp>
       <Grid />
+      <Controls />
     </StyledApp>
   );
 };
